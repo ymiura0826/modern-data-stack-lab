@@ -39,7 +39,7 @@ deployments:
   tags: []
   concurrency_limit: null
   description: null
-  entrypoint: flows/dbt_flow.py:dbt_flow
+  entrypoint: flows/dbt_flow.py:run_dbt_flow
   parameters: {}
   work_pool:
     name: docker-push-pool
