@@ -1,0 +1,19 @@
+
+version: 2
+
+models:
+  - name: dwh__events_flat
+    description: "GA4のイベントデータ集積"
+    meta: 
+      owner: "happy data manegiment"
+      update_frequency: "daily"
+    columns:
+      - name: event_date
+        description: "パーティションキー"
+        data_tests:
+          - not_null
+
+      - name: event_timestamp
+        description: "イベントの発生時刻"
+        data_tests:
+          - not_null

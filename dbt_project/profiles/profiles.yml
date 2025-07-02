@@ -1,0 +1,39 @@
+modern_dbt_lab:
+  outputs:
+    demo:
+      type: bigquery
+      method: service-account
+      project: seraphic-elixir-462005-c6
+      dataset: dbt_demo
+      keyfile: C:\Users\ymiura0826\.gcp\data-pipeline-sa-key.json
+      location: asia-northeast1
+      threads: 4
+      priority: interactive
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+
+    dwh:
+      type: bigquery
+      method: service-account
+      project: seraphic-elixir-462005-c6
+      dataset: dwh
+      keyfile: C:\Users\ymiura0826\.gcp\data-pipeline-sa-key.json
+      location: asia-northeast1
+      threads: 4
+      priority: interactive
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+
+    mart:
+      type: bigquery
+      method: service-account
+      project: seraphic-elixir-462005-c6
+      dataset: mart
+      keyfile: C:\Users\ymiura0826\.gcp\data-pipeline-sa-key.json
+      location: asia-northeast1
+      threads: 4
+      priority: interactive
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+
+  target: demo

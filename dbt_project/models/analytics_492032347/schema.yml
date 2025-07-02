@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: ga4
+    database: seraphic-elixir-462005-c6
+    schema: analytics_492032347
+    tables:
+      - name: events
+        description: "GA4 のイベントデータ（ワイルドカードテーブル）"
+        columns:
+          - name: event_name
+            description: "イベント名"
+          - name: event_timestamp
+            description: "イベントが発生したタイムスタンプ"

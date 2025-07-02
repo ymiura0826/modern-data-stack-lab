@@ -1,0 +1,12 @@
+CREATE TABLE `seraphic-elixir-462005-c6.dataops.sync_status_logs` (
+  execution_date DATE NOT NULL,           -- 対象日付
+  pipeline_name STRING NOT NULL,           -- 例: 'ga4_to_bq', 'airbyte_to_bq', 'dbt_run'
+  status_name STRING NOT NULL,             -- 例: 'ready', 'failed', 'complete'
+  triggered_by STRING NOT NULL,            -- 例: 'ga4_batch_cloud_function'
+  inserted_at TIMESTAMP NOT NULL
+)
+-- execution_dateパーティション or ingestion-timeパーティション
+PARTITION BY execution_date
+OPTIONS (
+  partition_expiration_days = 30          -- 30日後に自動削除
+);
