@@ -46,3 +46,16 @@ deployments:
     work_queue_name: null
     job_variables: {}
   schedules: []
+
+- name: dbt_flow
+  version: null
+  tags: []
+  concurrency_limit: null
+  description: null
+  entrypoint: flows/test_dbt_exists.py:test_dbt_exists
+  parameters: {}
+  work_pool:
+    name: docker-push-pool
+    work_queue_name: null
+    job_variables: {}
+  schedules: []
