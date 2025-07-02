@@ -32,3 +32,17 @@ deployments:
     work_queue_name: null
     job_variables: {}
   schedules: []
+
+# 追加: dbt_flow の Flow 定義
+- name: dbt_flow
+  version: null
+  tags: []
+  concurrency_limit: null
+  description: null
+  entrypoint: flows/dbt_flow.py:dbt_flow
+  parameters: {}
+  work_pool:
+    name: docker-push-pool
+    work_queue_name: null
+    job_variables: {}
+  schedules: []
