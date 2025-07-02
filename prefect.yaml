@@ -30,7 +30,6 @@ dependencies:
   - google-auth==2.40.3
   - db-dtypes==1.4.3
   - pydata-google-auth==1.9.1
-  - pydantic>=2.0
 
 # the deployments section allows you to provide configuration for deploying flows
 deployments:
