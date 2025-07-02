@@ -1,9 +1,10 @@
 from prefect import flow
 from prefect_dbt.cli.commands import DbtCoreOperation
+from prefect_gcp import GcpCredentials
 
 @flow(log_prints=True)
 def run_dbt_flow():
-    # 先ほど作成した Block 名（run-dbt-core）を指定
+    gcp_credentials = GcpCredentials.load("data-pipeline-sa-key")
     result = DbtCoreOperation.load("run-dbt-core").run()
     print("dbt run result:", result)
 
