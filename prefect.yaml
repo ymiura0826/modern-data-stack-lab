@@ -18,6 +18,12 @@ pull:
     repository: https://github.com/ymiura0826/modern-data-stack-lab.git
     branch: main
 
+dependencies:
+  - prefect==3.4.7
+  - prefect-dbt==0.7.1
+  - prefect-gcp==0.4.4
+  - pydantic<3.0
+
 # the deployments section allows you to provide configuration for deploying flows
 deployments:
 - name: test_hello
