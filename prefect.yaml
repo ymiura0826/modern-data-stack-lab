@@ -18,7 +18,6 @@ pull:
       repository: https://github.com/ymiura0826/modern-data-stack-lab.git
       branch: main
   - prefect.deployments.steps.pip_install_requirements:
-      directory: "{{ pull_code.directory }}"
       requirements_file: requirements.txt
 
 dependencies:
